@@ -1,0 +1,32 @@
+%!TEX program = pdflatex
+%!TEX output_directory = build
+\documentclass[11pt,a4paper]{article}
+\input{preamble}
+\input{metadata}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{sections/00_cover}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\tableofcontents
+\vfill
+\noindent\textbf{About this edition}\par
+\noindent This PDF reproduces the English report published on the FinTax website on
+\ReportDate. The report text and its six original illustrations are retained;
+the three tables are typeset as editable monochrome tables, and the cover, contents, pagination and source note are added for this PDF edition.
+Policy statements retain the original publication context.\par
+\medskip
+\noindent\href{\ReportURL}{Read the original report on fintax.tech}
+\clearpage
+\pagenumbering{arabic}
+\input{sections/01_mining_transition}
+\input{sections/02_policy_landscape}
+\input{sections/03_state_comparison}
+\input{sections/04_applications}
+\input{sections/05_conclusion}
+\input{sections/06_source_note}
+% Reserved for future verified citations; the source article has no bibliography.
+% \bibliographystyle{plainnat}
+% \bibliography{references}
+\end{document}

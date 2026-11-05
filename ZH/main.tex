@@ -1,0 +1,31 @@
+%!TEX program = xelatex
+%!TEX output_directory = build
+\documentclass[UTF8,11pt,a4paper,fontset=fandol,scheme=plain]{ctexart}
+\input{preamble}
+\input{metadata}
+
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{sections/00_cover}
+\pagenumbering{roman}
+\hypersetup{pageanchor=true}
+\tableofcontents
+\vfill
+\noindent\textbf{关于本中文版}\par
+\noindent 本文依据 FinTax 于\ReportDate{}发布的英文报告翻译，为中文排版初稿。
+保留原报告章节、数据和论述，三张表格改为可编辑的黑白线框表格，地图及申请表截图保留英文原图。
+封面、目录、页码及来源说明为本 PDF 版本新增内容，政策表述保留原报告发表时的语境。\par
+\medskip
+\noindent\href{\ReportURL}{在 fintax.tech 阅读英文原文}
+\clearpage
+\pagenumbering{arabic}
+\input{sections/01_mining_transition}
+\input{sections/02_policy_landscape}
+\input{sections/03_state_comparison}
+\input{sections/04_applications}
+\input{sections/05_conclusion}
+\input{sections/06_source_note}
+% Reserved for future verified citations; the source article has no bibliography.
+% \bibliographystyle{plainnat}
+% \bibliography{references}
+\end{document}
